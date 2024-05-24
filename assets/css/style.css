@@ -29,6 +29,13 @@ body {
     align-items: center;
 }
 
+.navbar-brand {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+}
+
 .navbar-brand img {
     height: 30px;
     margin-right: 16px;
@@ -43,6 +50,10 @@ body {
     margin-top: 50px;
 
     color: #333;
+
+    background: linear-gradient(to right, #007BFF, #2b0e85);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .btn-outline {
@@ -175,6 +186,10 @@ body {
     color: #171717;
 }
 
+.project {
+    margin-top: 32px;
+}
+
 .projects h1 {
     font-family: "Sofia Sans", sans-serif;
     font-weight: 850;
@@ -242,6 +257,12 @@ body {
     transition: 0.6s;
 }
 
+.wrapper .separator {
+    height: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+    transition: all 0.3s ease;
+}
 
 
 .thumbnail-title {
@@ -372,4 +393,59 @@ h1.contact {
 
 .row a i {
     font-size: 4em;
+}
+
+
+/* CV */
+
+.cv {
+    padding-top: 15vh;
+}
+
+.container.translucent {
+    padding: 24px 32px 24px 32px;
+    background-color: #c9c5c580;
+    backdrop-filter: blur(7px); 
+    background: linear-gradient(90deg, #c9c5c580 0%, #c9c5c53e 100%);
+    border-radius: 24px;
+}
+
+.container.translucent h1 {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.my-name {
+    background: linear-gradient(to right, #007BFF, #00BFFF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container.translucent img {
+    max-height: 42px;
+    margin-right: 16px;
+}
+
+.container.translucent .download {
+    min-height: 48px;
+    background-color: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 18px;
+    padding: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.container.translucent a {
+    text-decoration: none;
+}
+
+.container.translucent .download:hover,
+.container.translucent .download:focus {
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }

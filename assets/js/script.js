@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function createProject(year, thumbnailSrc, title, subtitle, description, id) {
     return `
-        <div class="project mt-4">
+        <div class="project">
             <div class="row flex-container">
                 <div class="col-4">
                     <div class="time">
@@ -21,10 +21,13 @@ function createProject(year, thumbnailSrc, title, subtitle, description, id) {
                             src="${thumbnailSrc}" 
                             alt="thumbnail"
                             onclick="toggleDescription('description${id}')" />
-                        <div class="description" id="description${id}">
-                            <h2 class="thumbnail-title" id="tt-${id}">${title}</h2>
-                            <p class="thumbnail-subtitle" id="tst-${id}">${subtitle}</p>
-                            <p class="thumbnail-text" id="ttext-${id}">${description}</p>
+                        <div class="description-container">
+                            <div class="description" id="description${id}">
+                                <h2 class="thumbnail-title" id="tt-${id}">${title}</h2>
+                                <p class="thumbnail-subtitle" id="tst-${id}">${subtitle}</p>
+                                <p class="thumbnail-text" id="ttext-${id}">${description}</p>
+                            </div>
+                            <div class="separator" id="separator${id}"></div>
                         </div>
                     </div>
                 </div>
@@ -74,4 +77,20 @@ Developers and PropertiO users can seamlessly access the application by logging 
 var projectContainer = document.getElementById('project-lists');
 projectList.forEach(function(project) {
     projectContainer.innerHTML += project;
+});
+
+
+$(document).ready(function(){
+    $(".description-container").hover(
+        function() {
+            // This function is called when the mouse enters the .description-container element
+            var descriptionHeight = $(this).find(".description").height();
+            var imgHeight = $(this).find(".thumbnail").height();
+            $(this).find(".separator").css("height", descriptionHeight );
+        },
+        function() {
+            // This function is called when the mouse leaves the .description-container element
+            $(this).find(".separator").css("height", "0");
+        }
+    );
 });
