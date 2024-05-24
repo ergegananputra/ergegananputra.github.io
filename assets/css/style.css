@@ -1,0 +1,264 @@
+body {
+    background-color: rgb(237, 235, 235);
+
+    font-family: "Epilogue", sans-serif;
+}
+
+.navbar.island {
+    background-color: #f0f0f000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.navbar .container {
+    background-color: #c9c5c580;
+    backdrop-filter: blur(7px); 
+    width: 80%;
+    padding: 16px 24px;
+    border-radius: 24px;
+}
+
+.container.welcome {
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container.welcome h1 {
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 850;
+    font-style: normal;
+    font-size: 4rem;
+
+    margin-top: 50px;
+
+    color: #333;
+}
+
+.btn-outline {
+    margin-top: 50px;
+
+    background-color: transparent;
+    border: 2px solid #007BFF; 
+    color: #007BFF; 
+}
+
+.btn-outline:hover {
+    background-color: #007BFF; 
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container.welcome h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container.welcome h1 {
+        font-size: 2rem;
+    }
+}
+
+.transition.welcome{
+    height: 10vh;
+    background-image: url(../images/transitions/transition-1.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.transition.skills{
+    height: 10vh;
+    background-image: url(../images/transitions/transition-2.png);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.skills {
+    padding-bottom: 20vh;
+    /* background-color: #1C1C1C; */
+    background-image: linear-gradient(to bottom, #1C1C1C, #070415);
+    color: #fbfbfb;
+}
+
+.skills h1 {
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 850;
+    font-style: normal;
+    font-size: 3rem;
+
+    padding: 200px 0px 50px 0px;
+    
+
+    color: #fff;
+}
+
+.skill {
+    height: 20vh;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    background-color: #f0f0f040;
+    border-radius: 24px;
+    backdrop-filter: blur(7px); 
+
+    transition: all 0.3s ease;
+
+}
+
+.skill h3 {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 300;
+}
+
+
+.skill img {
+    height: 10vh;
+    margin: 25px;
+}
+
+.carousel {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel__track {
+    display: inline-block;
+    animation: marquee 45s linear infinite;
+}
+
+.carousel__track--2 {
+    display: inline-block;
+    animation: marquee 45s linear infinite;
+    animation-delay: 0s;
+}
+
+
+.carousel__item {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+/* PROJECT */
+
+.projects {
+    padding-bottom: 20vh;
+    background-color: rgb(237, 235, 235);
+    color: #171717;
+}
+
+.projects h1 {
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 850;
+    font-style: normal;
+    font-size: 3rem;
+
+    padding: 200px 0px 50px 0px;
+    
+
+    color: #171717;
+}
+
+
+.project .time {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper .image {
+    width: 100%;
+    position: relative;
+
+    border-radius: 3vh;
+}
+
+.wrapper img {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    border-radius: 3vh;
+}
+
+.wrapper .description {
+    border-radius: 3vh;
+    padding: 30px;
+
+    width: 100%;
+    height: fit-content;
+    min-height: 100%;
+    top:0;
+    left:0;
+    position: absolute;
+
+    background-color: #070415c2;
+    backdrop-filter: blur(7px); 
+
+
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.wrapper .description:hover {
+    scale: 1.02;
+    opacity: 1;
+    transition: 0.6s;
+}
+
+
+
+.thumbnail-title {
+    font-family: "Sofia Sans", sans-serif;
+    font-weight: 850;
+    font-style: normal;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.thumbnail-subtitle {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 550;
+    font-style: normal;
+    font-size: 1rem;
+    color: #dadada;
+}
+
+.thumbnail-text {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #ffffff;
+}
