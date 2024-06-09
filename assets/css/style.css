@@ -33,11 +33,13 @@ body {
 
 .container.welcome {
     height: 90vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0.5vh;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -62,9 +64,17 @@ body {
 
     color: #333;
 
-    background: linear-gradient(to right, #007BFF, #2b0e85);
+    background: linear-gradient(270deg, #007BFF, #2b0e85, #007BFF);
+    background-size: 200% 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 200% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .btn-outline {
@@ -98,6 +108,9 @@ body {
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    z-index: 2;
+    position: relative;
 }
 
 .transition.skills{
@@ -113,6 +126,9 @@ body {
     /* background-color: #1C1C1C; */
     background-image: linear-gradient(to bottom, #1C1C1C, #070415);
     color: #fbfbfb;
+
+    z-index: 2;
+    position: relative;
 }
 
 .skills h1 {
